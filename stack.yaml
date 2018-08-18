@@ -1,0 +1,6 @@
+resolver: lts-11.21
+packages: []
+extra-deps: []
+flags: {}
+extra-package-dbs: []
+allow-newer: true

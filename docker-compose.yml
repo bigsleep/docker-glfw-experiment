@@ -1,0 +1,13 @@
+version: "2"
+services:
+  app:
+    build: .
+    command: bash -c 'stack install GLFW-b-demo && /root/.local/bin/GLFW-b-demo'
+    working_dir: /app
+    privileged: true
+    environment:
+      - DISPLAY=${DISPLAY}
+    volumes:
+      - .:/app
+      - .stack:/root/.stack
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
